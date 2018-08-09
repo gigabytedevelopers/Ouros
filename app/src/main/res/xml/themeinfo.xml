@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<themeInfo>
+
+    <!-- FOR ATOM LAUNCHER -->
+
+    <packageName>com.gigabytedevsinc.mezue.ouros</packageName>
+    <versionName>1.0.6</versionName>
+    <versionCode>106</versionCode>
+    <themeName>Ouros</themeName>
+
+    <!-- Default Component Color -->
+    <themePointColor>#FFC107</themePointColor>
+    <themePreview img1="preview1" />
+    <preview img1="preview1"
+        img2="preview2"
+        img3="preview3"/>
+
+</themeInfo>

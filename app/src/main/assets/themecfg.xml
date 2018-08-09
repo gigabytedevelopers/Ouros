@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<theme>
+    <version>1.0.6</version>
+    <pkgName>com.gigabytedevsinc.mezue.ouros</pkgName>
+	<themeName>Ouros</themeName>
+	<themeInfo>Ouros icon pack is a mixture of gradient and material colours.</themeInfo>
+	<preview img1="preview1" img2="preview2" img3="preview3"/>
+	
+</theme>
