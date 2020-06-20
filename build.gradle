@@ -6,7 +6,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.0'
+        classpath 'com.android.tools.build:gradle:4.0.0'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -23,10 +23,10 @@ allprojects {
 
     //NOTE: This is important
     rootProject.ext {
-        BuildTools = "27.0.1"
+        BuildTools = "29.0.3"
         MinSdk = 15
-        TargetSdk = 27
-        CompileSdk = 27
+        TargetSdk = 29
+        CompileSdk = 29
     }
 
 }
