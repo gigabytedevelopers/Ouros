@@ -7,13 +7,14 @@ public class CandyBar extends CandyBarApplication {
     @Override
     public void onCreate() {
         //Sample configuration
+        super.onCreate();
         Configuration configuration = new Configuration();
 
         configuration.setGenerateAppFilter(true);
         configuration.setGenerateAppMap(true);
         configuration.setGenerateThemeResources(true);
         configuration.setDashboardThemingEnabled(true);
-        
+
         initApplication(configuration);
     }
 }

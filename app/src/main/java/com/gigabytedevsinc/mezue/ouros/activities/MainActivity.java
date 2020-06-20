@@ -13,6 +13,7 @@ public class MainActivity extends CandyBarMainActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         initMainActivity(savedInstanceState,
                 new InAppBillingHelper.Property(
                         License.isLicenseCheckerEnabled(),

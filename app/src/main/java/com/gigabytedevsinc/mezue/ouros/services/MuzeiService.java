@@ -25,9 +25,8 @@ public class MuzeiService extends CandyBarMuzeiService {
     }
 
     @Override
-    protected void onTryUpdate(int reason) throws RetryException {
+    protected void onTryUpdate(int reason) {
         String wallpaperUrl = getResources().getString(R.string.wallpaper_json);
         tryUpdate(wallpaperUrl);
     }
-
 }

@@ -10,6 +10,7 @@ public class MuzeiActivity extends CandyBarMuzeiActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         initMuzeiActivity(savedInstanceState, MuzeiService.class);
     }
 }
