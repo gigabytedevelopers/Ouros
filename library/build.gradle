@@ -1,0 +1,124 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.github.zixpo'
+
+/*
+ * CandyBar - Material Dashboard
+ *
+ * Copyright (c) 2014-2016 Dani Mahardhika
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+android {
+    compileSdkVersion rootProject.ext.CompileSdk
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.MinSdk
+        targetSdkVersion rootProject.ext.TargetSdk
+        versionCode 363
+        versionName "3.6.3"
+        vectorDrawables.useSupportLibrary true
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        abortOnError false
+        disable 'MissingTranslation'
+    }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        return true
+    }
+}
+
+dependencies {
+    implementation project (':extLibs:PreLollipopTransitions')
+    implementation project (':extLibs:uil')
+
+    api 'androidx.annotation:annotation:1.1.0'
+    api 'androidx.appcompat:appcompat:1.1.0'
+    api 'com.google.android.apps.muzei:muzei-api:3.2.0'
+    api 'androidx.multidex:multidex:2.0.1'
+
+    implementation "androidx.work:work-runtime:2.2.0-rc01"
+
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.palette:palette:1.0.0'
+
+    implementation 'com.bluelinelabs:logansquare:1.3.7'
+    annotationProcessor 'com.bluelinelabs:logansquare-compiler:1.3.7'
+
+    implementation 'io.github.inflationx:calligraphy3:3.1.1'
+    implementation 'io.github.inflationx:viewpump:2.0.3'
+    implementation 'com.squareup.okhttp3:okhttp:4.3.0'
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    implementation 'com.afollestad.material-dialogs:commons:0.9.6.0'
+    implementation 'com.github.pluscubed:recycler-fast-scroll:0.3.2@aar'
+    implementation 'com.mikhaellopez:circularimageview:3.0.2'
+    implementation 'com.anjlab.android.iab.v3:library:1.0.44'
+    implementation 'com.github.chrisbanes:PhotoView:1.3.1'
+    implementation 'org.sufficientlysecure:html-textview:3.5'
+    implementation 'me.grantland:autofittextview:0.2.1'
+    implementation 'com.github.KeepSafe:TapTargetView:1.9.1'
+    implementation 'com.github.javiersantos:AppUpdater:2.7'
+    implementation 'com.github.sarsamurmu:AdaptiveIconBitmap:bae8007499'
+
+    implementation("com.github.bumptech.glide:glide:4.9.0@aar") {
+        transitive = true
+    }
+
+    implementation 'com.github.danimahardhika:cafebar:1.3.2'
+    implementation('com.github.danimahardhika.android-helpers:core:-SNAPSHOT') {
+        transitive = true
+    }
+    implementation 'com.github.danimahardhika.android-helpers:animation:0.1.0'
+    implementation 'com.github.danimahardhika.android-helpers:license:0.1.0'
+    implementation 'com.github.danimahardhika.android-helpers:permission:0.1.0'
+    implementation 'com.github.danimahardhika:DrawMe:4a672e78fc'
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion rootProject.ext.SupportLibrary
+            }
+        }
+    }
+}
