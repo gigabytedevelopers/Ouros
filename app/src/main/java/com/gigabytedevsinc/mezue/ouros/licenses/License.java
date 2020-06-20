@@ -1,7 +1,20 @@
 package com.gigabytedevsinc.mezue.ouros.licenses;
 
-import com.dm.material.dashboard.candybar.items.InAppBilling;
+import candybar.lib.items.InAppBilling;
 
+/**
+ * Project - Ouros
+ * Created with Android Studio
+ * Company: Gigabyte Developers
+ * User: Emmanuel Nwokoma
+ * Title: Founder and CEO
+ * Day: Saturday, 20
+ * Month: June
+ * Year: 2020
+ * Date: 20 Jun, 2020
+ * Time: 8:57 AM
+ * Desc: License
+ **/
 public class License {
 
     /*
@@ -33,7 +46,7 @@ public class License {
      * Your license key
      * If your app hasn't published at play store, publish it first as beta, get license key
      */
-    private static final String LICENSE_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtgLrKO2BXufWg76sy5gbBvGrZ9bW0z2qnbHBOablTLr0by189wCRnPqAZ+uGk8dua6OvLFXcV/NE6KpdwTTvKo1i80BPYfgVZvOgv8ewICylsDhQVyxxEpbRcJs3n6Jc0+hZAScU4O/SJHzpn+8Wii82kOvfjmFH7Hblp/mG6AlUB5KP+GiSiKx7zMJSjNKgLP6qXzY4QCo6+Lfsdf4w0Fd/xulBwYpFLU92zZtCs0EeBZVuQGbWAFFaK/xj4SjXT9lSRmKQml8xU/e650wmetlDPCDK/d06O7LiEY0olW9Y08I/FpeToo4wgkWj0LV09u5YIUI+hxwaj3CpnJtJawIDAQAB";
+    private static final String LICENSE_KEY = "YOUR LICENSE KEY";
 
     /*
      * NOTE: Make sure your app name in project same as app name at play store listing
@@ -48,11 +61,11 @@ public class License {
      * So make sure to name it properly, like include number of icons
      * Format: new InAppBilling("premium request product id", number of icons)
      */
-    private static final InAppBilling[] PREMIUM_REQUEST_PRODUCTS = new InAppBilling[] {
-            new InAppBilling("com.ouros.icons.first", 1),
-            new InAppBilling("com.ouros.icons.second", 2),
-            new InAppBilling("com.ouros.icons.third", 5),
-            new InAppBilling("com.ouros.icons.fourth", 10)
+    private static final InAppBilling[] PREMIUM_REQUEST_PRODUCTS = new InAppBilling[]{
+            new InAppBilling("your.product.id", 1),
+            new InAppBilling("your.product.id", 2),
+            new InAppBilling("your.product.id", 3),
+            new InAppBilling("your.product.id", 4)
     };
 
     /*
@@ -63,11 +76,11 @@ public class License {
      * So make sure to name it properly
      * Format: new InAppBilling("donation product id")
      */
-    private static final InAppBilling[] DONATION_PRODUCT = new InAppBilling[] {
-            new InAppBilling("com.ouros.donation"),
-            new InAppBilling("com.ouros.donation.two"),
-            new InAppBilling("com.ouros.donation.three"),
-            new InAppBilling("com.ouros.donation.four")
+    private static final InAppBilling[] DONATION_PRODUCT = new InAppBilling[]{
+            new InAppBilling("your.product.id"),
+            new InAppBilling("your.product.id"),
+            new InAppBilling("your.product.id"),
+            new InAppBilling("your.product.id")
     };
 
     public static boolean isLicenseCheckerEnabled() {
@@ -100,10 +113,9 @@ public class License {
 
     public static String[] getDonationProductsId() {
         String[] productId = new String[DONATION_PRODUCT.length];
-        for (int i = 0 ; i < DONATION_PRODUCT.length; i++) {
+        for (int i = 0; i < DONATION_PRODUCT.length; i++) {
             productId[i] = DONATION_PRODUCT[i].getProductId();
         }
         return productId;
     }
-
 }
