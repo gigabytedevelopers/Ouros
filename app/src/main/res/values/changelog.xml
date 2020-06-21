@@ -2,15 +2,19 @@
 <resources>
 
     <!-- Leave empty if you don't want to show changelog date -->
-    <string name="changelog_date">November 30, 2017</string>
+    <string name="changelog_date" translatable="false">June 21, 2020</string>
     <!-- Changelog support html formatting
     * <b> for Bold
     * <i> for Italic
     * <u> for Underline -->
     <string-array name="changelog">
-        <item>Added 22+ Icons</item>
+        <item>Added 42+ Icons</item>
+        <item>Added shortcut feature</item>
+        <item>Added clock widget</item>
         <item>Redesigned some icons</item>
         <item>Fixed missing activities</item>
+        <item>Performance improvements</item>
+        <item>Major bug fixes</item>
         <item>Minor UI Changes</item>
     </string-array>
 
