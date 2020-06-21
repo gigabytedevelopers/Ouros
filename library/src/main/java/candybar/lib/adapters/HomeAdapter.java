@@ -544,9 +544,9 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                         break;
                     case DIMENSION:
                         Home home = mHomes.get(position);
-                        IconPreviewFragment.showIconPreview(
+                        /*IconPreviewFragment.showIconPreview(
                                 ((AppCompatActivity) mContext).getSupportFragmentManager(),
-                                home.getTitle(), home.getIcon());
+                                home.getTitle(), home.getIcon());*/
                         break;
                 }
             }

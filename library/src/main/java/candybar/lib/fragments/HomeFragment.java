@@ -167,7 +167,7 @@ public class HomeFragment extends Fragment implements HomeListener {
                 true));
 
         if (CandyBarMainActivity.sHomeIcon != null) {
-            homes.add(CandyBarMainActivity.sHomeIcon);
+            //homes.add(CandyBarMainActivity.sHomeIcon);
         }
 
         mRecyclerView.setAdapter(new HomeAdapter(getActivity(), homes,
