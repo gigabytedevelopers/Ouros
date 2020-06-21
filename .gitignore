@@ -26,3 +26,6 @@ hs_err_pid*
 .gradle
 build
 /.gradle/
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
