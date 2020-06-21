@@ -84,7 +84,7 @@
     * You can use CandyBar drawable.xml builder to sort icons
     * Enable -> true
     * Disable -> false -->
-    <bool name="enable_icons_sort">true</bool>
+    <bool name="enable_icons_sort">false</bool>
 
     <!-- Icon picker icon name text below icon
     * default: true
